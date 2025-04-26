@@ -1,6 +1,9 @@
 """Needs to make sure python3 runtime has:  pypdf and pypdf[image]"""
 #!/bin/python3
 
+# python3 -m venv ./venv
+# source ./venv/bin/activate
+
 from typing import List
 from pypdf import PdfReader
 import re
@@ -18,6 +21,7 @@ def isUsefulText(s: str) -> bool:
     """if a given string does not meet the criteria to be used in content creation"""
     # if "ATP 3-20.98" in s: return False
     if s == s.upper(): return False
+    if s.startswith("Chapter"): return False
     return True
 
 
@@ -50,7 +54,7 @@ def capture_paragraph_per_topic(data: List[str], topic) -> str:
         if len(_stringlist) > 0 and compiled_re.match(_stringlist[0]):
             break
         current = next
-    return "".join(content)
+    return " ".join(content)
 
 
 if __name__ == "__main__":
@@ -84,11 +88,14 @@ if __name__ == "__main__":
         "passageoflines": capture_paragraph_per_topic(data, "PASSAGE OF LINES"),
 
         #DIDEA / Scout OODA Loop
-        "didea": capture_paragraph_per_topic(data, "Figure 4-28. Direct fire engagement process")
+        "didea": capture_paragraph_per_topic(data, "Figure 4-28. Direct fire engagement process"),
+
+        "dangerareas": capture_paragraph_per_topic(data, "DANGER AREAS")
     }
 
     pprint(content)
 
-    extract_all_images_from_pdf(path)
+    # No need to extract images at this time.
+    # extract_all_images_from_pdf(path)
 
     
