@@ -1,3 +1,6 @@
+"""Needs to make sure python3 runtime has:  pypdf and pypdf[image]"""
+#!/bin/python3
+
 from typing import List
 from pypdf import PdfReader
 import re
