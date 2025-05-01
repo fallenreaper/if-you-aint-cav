@@ -7,6 +7,7 @@
 from typing import List
 from pypdf import PdfReader
 import re
+import json
 from pprint import pprint
 
 
@@ -94,6 +95,10 @@ if __name__ == "__main__":
     }
 
     pprint(content)
+
+    with open("extraction.json", "w+") as fp:
+        # json.dump(fp, content)
+        fp.write(json.dumps(content))
 
     # No need to extract images at this time.
     # extract_all_images_from_pdf(path)
