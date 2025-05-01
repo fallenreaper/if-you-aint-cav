@@ -9,3 +9,9 @@ captures
 local.properties
 xcuserdata
 .kotlin
+
+# Python venv
+bin/
+lib/
+pyvenv.cfg
+

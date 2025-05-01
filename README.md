@@ -15,3 +15,12 @@ This is a Kotlin Multiplatform project targeting Android, iOS.
 
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+
+# Python
+If you want to use a venv for Python and process your own PDF, you can use requirements.
+
+```python3
+python3 -m venv .
+source bin/activate
+pip install -r requirements.txt
+```
