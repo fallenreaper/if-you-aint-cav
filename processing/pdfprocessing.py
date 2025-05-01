@@ -66,32 +66,32 @@ if __name__ == "__main__":
 
     content = {
         # Forms of X
-        "formsofsecurity": capture_paragraph_per_topic(data, "SECTION II – FORMS OF SECURITY TASKS"),
-        "formsofrecon": capture_paragraph_per_topic(data, "SECTION II – FORMS OF RECONNAISSANCE"),
+        "formsofsecurity": { "title": "Forms of Security", "text": capture_paragraph_per_topic(data, "SECTION II – FORMS OF SECURITY TASKS")},
+        "formsofrecon": { "title": "Forms of Reconnaissance", "text": capture_paragraph_per_topic(data, "SECTION II – FORMS OF RECONNAISSANCE")},
 
         # Forms of Security - details
-        "screen": capture_paragraph_per_topic(data, "SCREEN"),
-        "guard": capture_paragraph_per_topic(data, "GUARD"),
-        "cover": capture_paragraph_per_topic(data, "COVER"),
-        "area": capture_paragraph_per_topic(data, "AREA SECURITY"),
-        "local": capture_paragraph_per_topic(data, "LOCAL SECURITY"),
+        "screen": { "title": "Screen", "text": capture_paragraph_per_topic(data, "SCREEN")},
+        "guard": { "title": "Guard", "text": capture_paragraph_per_topic(data, "GUARD")},
+        "cover":  { "title": "Cover", "text": capture_paragraph_per_topic(data, "COVER")},
+        "area": { "title": "Area Security", "text": capture_paragraph_per_topic(data, "AREA SECURITY")},
+        "local": { "title": "Local Security", "text": capture_paragraph_per_topic(data, "LOCAL SECURITY")},
 
         # Forms of Recon - details
-        "zone": capture_paragraph_per_topic(data, "ZONE RECONNAISSANCE"),
-        "area": capture_paragraph_per_topic(data, "AREA RECONNAISSANCE"),
-        "route": capture_paragraph_per_topic(data, "ROUTE RECONNAISSANCE"),
-        "reconinforce": capture_paragraph_per_topic(data, "RECONNAISSANCE IN FORCE"),
-        "specialrecon": capture_paragraph_per_topic(data, "SPECIAL RECONNAISSANCE"),
+        "zone": { "title": "Zone Recon", "text": capture_paragraph_per_topic(data, "ZONE RECONNAISSANCE")},
+        "area": { "title": "Area Recon", "text": capture_paragraph_per_topic(data, "AREA RECONNAISSANCE")},
+        "route": { "title": "Route Recon", "text": capture_paragraph_per_topic(data, "ROUTE RECONNAISSANCE")},
+        "reconinforce": { "title": "Recon in Force", "text": capture_paragraph_per_topic(data, "RECONNAISSANCE IN FORCE")},
+        "specialrecon": { "title": "Special Recon", "text": capture_paragraph_per_topic(data, "SPECIAL RECONNAISSANCE")},
 
         # Recon Handover
-        "rho": capture_paragraph_per_topic(data, "SECTION III – RECONNAISSANCE HANDOVER"),
+        "rho": { "title": "Recon Handover", "text": capture_paragraph_per_topic(data,"SECTION III – RECONNAISSANCE HANDOVER")},
 
-        "passageoflines": capture_paragraph_per_topic(data, "PASSAGE OF LINES"),
+        "passageoflines": { "title": "Passage of Lines", "text": capture_paragraph_per_topic(data, "PASSAGE OF LINES")},
 
         #DIDEA / Scout OODA Loop
-        "didea": capture_paragraph_per_topic(data, "Figure 4-28. Direct fire engagement process"),
+        "didea": { "title": "DIDEA", "text": capture_paragraph_per_topic(data, "Figure 4-28. Direct fire engagement process")},
 
-        "dangerareas": capture_paragraph_per_topic(data, "DANGER AREAS")
+        "dangerareas": { "title": "Danger Areas", "text": capture_paragraph_per_topic(data, "DANGER AREAS")},
     }
 
     pprint(content)
